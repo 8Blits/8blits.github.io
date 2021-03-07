@@ -1,0 +1,76 @@
+.text-gradiant-bp {
+    background-image: linear-gradient(0deg, rgb(32, 173, 255) , rgb(185, 65, 255) 80%);
+    background-image: -webkit-linear-gradient(0deg, rgb(32, 173, 255) , rgb(185, 65, 255) 80%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.text-gradiant-ro {
+    background-image: linear-gradient(0deg, rgb(253, 89, 89) , rgb(255, 118, 39) 80%);
+    background-image: -webkit-linear-gradient(0deg, rgb(253, 89, 89) , rgb(255, 118, 39) 80%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.text-plain {
+    background-color: white;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.h1-text {
+    font-family: transat, sans-serif;
+    font-weight: normal;
+    font-size: 12rem;
+    line-height: 12rem;
+    text-align: center;
+    letter-spacing: 15px;
+    margin-bottom: 0;
+}
+
+.h1-pos {
+    margin-top: 1em;
+    margin-top: calc(50vh - 0.90em);
+}
+
+.p0-background {
+    background-image: url("imgs/MainBackground.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.h2-text {
+    font-family: transat, sans-serif;
+    font-weight: normal;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+}
+
+.h2-pos {
+    margin-top: 1em;
+    margin-top: calc(50vh - 17em);
+}
+
+.discord-icon {
+    
+}
+
+.twitter-icon {
+
+}
+
+.github-icon {
+
+}
+
+.youtube-icon {
+    
+}
