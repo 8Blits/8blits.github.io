@@ -1,4 +1,30 @@
-.text-gradiant-bp {
+.scroll::-webkit-scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+.scroll-bad-browsers {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.webSize {
+    height: 300%;
+    margin: 0;
+}
+
+
+.background-color {
+    background-color: rgb(44, 44, 44);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+}
+
+/* Text Color */
+.text-gradient-bp {
     background-image: linear-gradient(0deg, rgb(32, 173, 255) , rgb(185, 65, 255) 80%);
     background-image: -webkit-linear-gradient(0deg, rgb(32, 173, 255) , rgb(185, 65, 255) 80%);
 
@@ -6,9 +32,9 @@
     -webkit-text-fill-color: transparent; 
 }
 
-.text-gradiant-ro {
-    background-image: linear-gradient(0deg, rgb(253, 89, 89) , rgb(255, 118, 39) 80%);
-    background-image: -webkit-linear-gradient(0deg, rgb(253, 89, 89) , rgb(255, 118, 39) 80%);
+.text-gradient-oy {
+    background-image: linear-gradient(0deg, rgb(253, 168, 89) , rgb(255, 225, 53) 80%);
+    background-image: -webkit-linear-gradient(0deg, rgb(253, 168, 89) , rgb(255, 225, 53) 80%);
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -21,56 +47,222 @@
     -webkit-text-fill-color: transparent; 
 }
 
-.h1-text {
+.text-pink {
+    background-color: rgb(185, 65, 255);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+
+/* Page 1 */
+
+/* Header Main Text */
+.p0-h1-text {
     font-family: transat, sans-serif;
-    font-weight: normal;
-    font-size: 12rem;
-    line-height: 12rem;
+    font-weight: 1;
+    font-size: 36px;
+    font-size: 9vw;
+    letter-spacing: default;
     text-align: center;
-    letter-spacing: 15px;
-    margin-bottom: 0;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
 }
 
-.h1-pos {
-    margin-top: 1em;
-    margin-top: calc(50vh - 0.90em);
+/* Header Second Text */
+.p0-h2-text {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 8px;
+    font-size: 2vw;
+    letter-spacing: default;
+    position: relative;
+    left: 10%;
+    box-sizing: border-box;
+    border: 0 solid;
 }
 
+/* Header Third Text */
+.p0-h3-text {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 4px;
+    font-size: 1vw;
+    font-style: oblique;
+    letter-spacing: default;
+    position: relative;
+    left: 40%;
+    top: 525px;
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+/* Background */
 .p0-background {
     background-image: url("imgs/MainBackground.png");
-    background-position: center center;
+    background-attachment: local;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-size: auto;
 }
 
-.h2-text {
+/* Page 1 Setup */
+.page0-align {
+    align-items: center;
+    box-sizing: border-box;
+
+    tab-size: 4;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    justify-content: center;
+}
+
+.page0-item-center {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+
+.page0-text0-position {
+    margin-top: 400px;
+}
+
+.page0-socials-position {
+
+}
+
+/* Socials */
+.discord {
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    top: 90%;
+    left: 55%;
+}
+.twitter {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 90%;
+    left: 45%;
+}
+.github {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+}
+
+
+/* Page 2 */
+
+/* Text */
+.p1-h1-text {
     font-family: transat, sans-serif;
-    font-weight: normal;
-    font-size: 2.25rem;
-    line-height: 2.25rem;
+    font-weight: 1;
+    font-size: 16px;
+    font-size: 4vw;
+    letter-spacing: default;
     text-align: center;
-    letter-spacing: 5px;
-    margin-bottom: 0;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
+    padding-left: 25px;
 }
 
-.h2-pos {
-    margin-top: 1em;
-    margin-top: calc(50vh - 17em);
+.p1-h2-text {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 8px;
+    font-size: 2vw;
+    overflow-wrap: break-word;
+    letter-spacing: default;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
 }
 
-.discord-icon {
-    
+/* Page 2 Setup */
+
+.page1-item-center {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
 }
 
-.twitter-icon {
-
+.page1-text0-position {
+    margin-top: 600px;
 }
 
-.github-icon {
-
+.page1-text1-position {
+    box-sizing: content-box;
+    width: 50%;
+    margin-left: 105px;
 }
 
-.youtube-icon {
-    
+/* Page 3 */
+
+/* Text */
+.p2-h1-text {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 16px;
+    font-size: 4vw;
+    letter-spacing: default;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
+    padding-left: 25px;
 }
+
+.p2-h2-text {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 8px;
+    font-size: 2vw;
+    overflow-wrap: break-word;
+    letter-spacing: default;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+/* Page 3 Setup */
+
+.page2-item-center {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+
+.page2-text0-position {
+    margin-top: 100px;
+}
+
+.page2-text-under-img-position {
+    margin-top: 100px;
+}
+
+
+/* Images */
+
+.row {
+    display: flex;
+    padding-left: 100px;
+}
+  
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+
+/* Footer */
