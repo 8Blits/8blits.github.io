@@ -9,7 +9,7 @@
 }
 
 .webSize {
-    height: 300%;
+    height: 260%;
     margin: 0;
 }
 
@@ -131,10 +131,6 @@
     margin-top: 400px;
 }
 
-.page0-socials-position {
-
-}
-
 /* Socials */
 .discord {
     width: 120px;
@@ -222,21 +218,33 @@
     padding-left: 25px;
 }
 
-.p2-h2-text {
+.p2-h2-text-0 {
     font-family: transat, sans-serif;
     font-weight: 1;
     font-size: 8px;
     font-size: 2vw;
-    overflow-wrap: break-word;
     letter-spacing: default;
     text-align: center;
     position: relative;
     box-sizing: border-box;
     border: 0 solid;
+    margin-left: 18%;
+}
+
+.p2-h2-text-1 {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 8px;
+    font-size: 2vw;
+    letter-spacing: default;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
+    margin-left: 37%;
 }
 
 /* Page 3 Setup */
-
 .page2-item-center {
     box-sizing: border-box;
     display: block;
@@ -251,9 +259,7 @@
     margin-top: 100px;
 }
 
-
 /* Images */
-
 .row {
     display: flex;
     padding-left: 100px;
@@ -264,5 +270,34 @@
     padding: 5px;
 }
 
-
 /* Footer */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+  
+.content-wrap {
+    padding-bottom: 2.5rem;
+}
+  
+.footer {
+    background-color: rgb(29, 29, 29);
+    position: static;
+    bottom: 0;
+    width: 120%;
+    height: 9rem;
+    margin-left: -10%;
+}
+
+.footer-text {
+    font-family: transat, sans-serif;
+    font-weight: 1;
+    font-size: 4px;
+    font-size: 2vw;
+    letter-spacing: default;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 solid;
+    padding-left: 25px;
+}
