@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+// import Tag from '../components/Tag.astro';
+import { Image } from 'astro:assets';
+
+import avatarIcon from "/public/images/8Blits@825px.png";
+import artIcon from "/public/images/icons/art.png";
+import vectorIcon from "/public/images/icons/vector.png";
+import modelingIcon from "/public/images/icons/modeling.png";
+import videoIcon from "/public/images/icons/video.png";
+import kotlinIcon from "/public/images/icons/kotlin.png";
+import webIcon from "/public/images/icons/web_1.png";
+import discordIcon from "/public/images/icons/discord.png";
+import emailIcon from "/public/images/icons/email.png";
+
+/* Age */
+function calculateAge(dateOfBirth: string): number {
+    const monthDiff = Date.now() - new Date(dateOfBirth).getTime()
+    const age = Math.abs(new Date(monthDiff).getUTCFullYear() - 1970)
+    return age
+}
+const age: number = calculateAge("3/30/2006")
+---
+
+<Layout title="8Blits">
+	<main class="flex justify-center items-center">
+		<div class="container mx-auto p-12 pt-0  gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50 ">
+			<Image class="rounded-full -mt-20 w-40 h-40" src={avatarIcon} alt="" width="825" height="825"/>
+			<span class="text-4xl font-bold text-black">8Blits</span>
+			<span class="text-xl font-normal text-center text-black">Self-driven {age} year old creative mind, block game enthusiast! 🤩</span>
+			<div class="flex flex-wrap w-1/2 justify-center gap-3"> <!-- Tags -->
+				<div class="tag">
+					<Image class="w-8 h-8" src={artIcon} alt="" width="360" height="360"/>
+					<span>2D Artist</span>
+				</div>
+				<div class="tag">
+					<Image class="w-8 h-8" src={vectorIcon} alt="" width="360" height="360"/>
+					<span>Vector Artist</span>
+				</div>
+				<div class="tag">
+					<Image class="w-8 h-8" src={modelingIcon} alt="" width="360" height="360"/>
+					<span>3D Artist</span>
+				</div>
+				<div class="tag">
+					<Image class="w-8 h-8" src={videoIcon} alt="" width="360" height="360"/>
+					<span>Video Editor</span>
+				</div>
+				<div class="tag">
+					<Image class="w-8 h-8" src={kotlinIcon} alt="" width="360" height="360"/>
+					<span>Kotlin Dev</span>
+				</div>
+				<div class="tag">
+					<Image class="w-8 h-8" src={webIcon} alt="" width="360" height="360"/>
+					<span>Web Dev</span>
+				</div>
+			</div>
+
+			<span class="text-4xl font-normal text-center text-black mt-6">Get in touch!</span>
+			<div class="flex justify-center gap-3"> <!-- Buttons -->
+				<a href="https://discord.gg/GR4m8VnzTX" target="_blank" class="button border-light-100 bg-light-50">
+					<Image class="w-8 h-8" src={discordIcon} alt="" width="360" height="360"/>
+					<span>Discord</span>
+				</a>
+				<a href="mailto:8blits@hexbros.com" target="_blank" class="button border-light-100 bg-light-50">
+					<Image class="w-8 h-8" src={emailIcon} alt="" width="360" height="360"/>
+					<span>Email</span>
+				</a>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer components {
+		.tag {
+			@apply p-2 px-8 gap-4 flex justify-center items-center rounded-full bg-light-100 text-xl font-normal text-nowrap text-black
+		}
+
+		.button {
+			@apply p-2 pr-8 pl-4 gap-8 flex justify-center items-center rounded-lg border-2 text-xl font-normal text-nowrap text-black cursor-pointer ease-out duration-300
+		}
+		.button:hover {
+			@apply -translate-y-2 rotate-3 shadow-xl
+		}
+	}
+</style>
+
+<!-- <style> -->
+	<!-- /* background-image: linear-gradient(var(--themeMain100) 80%, var(--themeMain200)); */ -->
+<!-- </style> -->
