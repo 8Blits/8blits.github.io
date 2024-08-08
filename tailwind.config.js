@@ -12,6 +12,10 @@ export default {
         'primary-50': '#34efff',
         'primary-100': '#33c2ff',
         'primary-200': '#206ad2',
+
+        'allow-50': '#e8ff4c',
+        'allow-100': '#6be624',
+        'allow-200': '#109e12',
       }
     },
   },

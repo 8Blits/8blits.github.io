@@ -9,7 +9,7 @@ interface Props {
 const { body, image } = Astro.props;
 ---
 
-<div class="p-1 px-4 gap-2 flex justify-center items-center rounded-full bg-light-100 text-base font-normal text-nowrap text-black">
+<div class="w-40 p-1 px-4 gap-2 flex justify-center items-center rounded-full bg-light-100 text-base font-normal text-nowrap text-black">
 	<Image class="w-6 h-6" src={image} alt="" width="360" height="360"/>
 	<span>{body}</span>
 </div>

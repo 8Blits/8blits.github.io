@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    href: string;
+    body: string;
+	image: ImageMetadata;
+}
+
+const { href, body, image } = Astro.props;
+---
+<a href={href} target="_blank" class="button border-light-100 bg-light-50">
+    <Image class="w-8 h-8" src={image} alt="" width="360" height="360"/>
+    <span>{body}</span>
+</a>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer components {
+		.button {
+			@apply p-2 pr-8 pl-4 gap-8 flex justify-center items-center rounded-lg border-2 text-xl font-normal text-nowrap text-black cursor-pointer ease-out duration-300
+		}
+		.button:hover {
+			@apply -translate-y-2 rotate-3 shadow-xl
+		}
+	}
+</style>

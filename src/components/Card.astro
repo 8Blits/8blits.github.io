@@ -1,0 +1,57 @@
+---
+import TagContainer from '../components/TagContainer.astro';
+import FaIcon from '../components/FaIcon.astro';
+import { Image } from 'astro:assets';
+
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
+interface Props {
+    href?: string;
+    title: string;
+    subtitle: string;
+	image: ImageMetadata;
+	imageColor: string;
+}
+
+const { href = '', title, subtitle, image, imageColor } = Astro.props;
+---
+
+<div class="flex min-h-60 rounded-lg border-2 border-light-100 bg-light-50">
+    <div class="flex-1 flex flex-col p-4">
+        <span class="text-xl font-bold">{title}</span>
+        <span class="text-xl font-normal w-9/12">{subtitle}</span>
+        <TagContainer>
+            <slot />
+        </TagContainer>
+
+        <div class="mt-auto flex items-center gap-2">
+            {href && (
+                <a href={href} target="_blank" class="hover">
+                    <FaIcon icon={faArrowUpRightFromSquare} />
+                    <span class="text-xl font-normal">Learn More</span>
+                </a>
+            )}
+        </div>
+    </div>
+
+    <div style={{ backgroundColor: imageColor }} class="max-w-96 p-8 h-full rounded-r-lg border-s-2">
+        <div class="aspect-square w-full">
+            <Image class="object-contain w-full h-full" src={image} alt="Brand Logo" width="1280" height="1280"/>
+        </div>
+    </div>
+</div>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer components {
+		.hover {
+			@apply cursor-pointer ease-out duration-300
+		}
+		.hover:hover {
+			@apply -translate-y-1 rotate-2
+		}
+	}
+</style>

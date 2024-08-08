@@ -1,8 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-// import Tag from '../components/Tag.astro';
-import { Image } from 'astro:assets';
+import Layout from "../layouts/Layout.astro";
+import Tag from "../components/Tag.astro";
+import TagIntro from "../components/TagIntro.astro";
+import TagContainerIntro from "../components/TagContainerIntro.astro";
+import ButtonIntro from "../components/ButtonIntro.astro";
+import Card from "../components/Card.astro";
+import FaIcon from "../components/FaIcon.astro";
+import { Image } from "astro:assets";
 
+/* Icons */
 import avatarIcon from "/public/images/8Blits@825px.png";
 import artIcon from "/public/images/icons/art.png";
 import vectorIcon from "/public/images/icons/vector.png";
@@ -12,83 +18,103 @@ import kotlinIcon from "/public/images/icons/kotlin.png";
 import webIcon from "/public/images/icons/web_1.png";
 import discordIcon from "/public/images/icons/discord.png";
 import emailIcon from "/public/images/icons/email.png";
+import calendarIcon from "/public/images/icons/calendar.png";
 
-/* Age */
+/* Brands */
+import stinkysmpBrand from "/public/images/brands/stinkysmp.png";
+import nauticalquestBrand from "/public/images/brands/nauticalquest.png";
+
+// ---
+
 function calculateAge(dateOfBirth: string): number {
-    const monthDiff = Date.now() - new Date(dateOfBirth).getTime()
-    const age = Math.abs(new Date(monthDiff).getUTCFullYear() - 1970)
-    return age
+    const monthDiff = Date.now() - new Date(dateOfBirth).getTime();
+    const age = Math.abs(new Date(monthDiff).getUTCFullYear() - 1970);
+    return age;
 }
-const age: number = calculateAge("3/30/2006")
+const age: number = calculateAge("3/30/2006");
 ---
 
 <Layout title="8Blits">
-	<main class="flex justify-center items-center">
-		<div class="container mx-auto p-12 pt-0  gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50 ">
-			<Image class="rounded-full -mt-20 w-40 h-40" src={avatarIcon} alt="" width="825" height="825"/>
-			<span class="text-4xl font-bold text-black">8Blits</span>
-			<span class="text-xl font-normal text-center text-black">Self-driven {age} year old creative mind, block game enthusiast! 🤩</span>
-			<div class="flex flex-wrap w-1/2 justify-center gap-3"> <!-- Tags -->
-				<div class="tag">
-					<Image class="w-8 h-8" src={artIcon} alt="" width="360" height="360"/>
-					<span>2D Artist</span>
-				</div>
-				<div class="tag">
-					<Image class="w-8 h-8" src={vectorIcon} alt="" width="360" height="360"/>
-					<span>Vector Artist</span>
-				</div>
-				<div class="tag">
-					<Image class="w-8 h-8" src={modelingIcon} alt="" width="360" height="360"/>
-					<span>3D Artist</span>
-				</div>
-				<div class="tag">
-					<Image class="w-8 h-8" src={videoIcon} alt="" width="360" height="360"/>
-					<span>Video Editor</span>
-				</div>
-				<div class="tag">
-					<Image class="w-8 h-8" src={kotlinIcon} alt="" width="360" height="360"/>
-					<span>Kotlin Dev</span>
-				</div>
-				<div class="tag">
-					<Image class="w-8 h-8" src={webIcon} alt="" width="360" height="360"/>
-					<span>Web Dev</span>
-				</div>
-			</div>
+    <main class="flex justify-center items-center flex-col gap-40">
+        <!-- Intro -->
+        <div class="container mx-auto p-12 pt-0 gap-6 flex justify-center items-center flex-col mt-40 rounded-lg shadow-2xl bg-light-50">
+            <div class="relative">
+                <Image
+                    class="rounded-full -mt-20 w-40 h-40"
+                    src={avatarIcon}
+                    alt=""
+                    width="825"
+                    height="825"
+                />
+                <div class="w-8 h-8 absolute bottom-0 right-0 rounded-full bg-allow-100 outline outline-8 outline-light-50"></div>
+            </div>
+            <span class="text-4xl font-bold text-black">8Blits</span>
+            <span class="text-xl font-normal text-center text-black">Self-driven {age} year old creative mind, block game enthusiast!</span>
+            <TagContainerIntro>
+                <TagIntro body="2D Artist" image={artIcon} />
+                <TagIntro body="Vector Artist" image={vectorIcon} />
+                <TagIntro body="3D Artist" image={modelingIcon} />
+                <TagIntro body="Video Editor" image={videoIcon} />
+                <TagIntro body="Kotlin Dev" image={kotlinIcon} />
+                <TagIntro body="Web Dev" image={webIcon} />
+            </TagContainerIntro>
 
-			<span class="text-4xl font-normal text-center text-black mt-6">Get in touch!</span>
-			<div class="flex justify-center gap-3"> <!-- Buttons -->
-				<a href="https://discord.gg/GR4m8VnzTX" target="_blank" class="button border-light-100 bg-light-50">
-					<Image class="w-8 h-8" src={discordIcon} alt="" width="360" height="360"/>
-					<span>Discord</span>
-				</a>
-				<a href="mailto:8blits@hexbros.com" target="_blank" class="button border-light-100 bg-light-50">
-					<Image class="w-8 h-8" src={emailIcon} alt="" width="360" height="360"/>
-					<span>Email</span>
-				</a>
-			</div>
-		</div>
-	</main>
+            <span class="text-4xl font-normal text-center text-black mt-6">Get in touch!</span>
+            <div class="flex justify-center gap-3">
+                <ButtonIntro
+                    href="https://discord.gg/GR4m8VnzTX"
+                    body="Discord"
+                    image={discordIcon}
+                />
+                <ButtonIntro
+                    href="mailto:8blits@hexbros.com"
+                    body="Email"
+                    image={emailIcon}
+                />
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
+            <span class="text-4xl font-bold text-black">Projects</span>
+            <!-- <span class="text-xl font-normal text-center text-black">Something about projects</span> -->
+
+            <div class="w-full grid grid-cols-1 gap-6">
+                <Card
+                    href="https://discord.gg/FXW5jY9Nvh"
+                    title="StinkySMP, Frostagon"
+                    subtitle="A completley custom SMP server that I co-founded, developed, and designed. This server features many unique features very different from the ordinary SMP server."
+                    image={stinkysmpBrand}
+                    imageColor="#c17c45"
+                >
+                    <Tag body="2024" image={calendarIcon} />
+                    <Tag body="500+ Users" image={artIcon} />
+                </Card>
+                <Card
+                    href="https://x.com/EVNTgames/status/1821245704582410317"
+                    title="Princess Cruises Nautical Quest, EVNT Games"
+                    subtitle="Brand activation for the cruise company Princess Cruises. I designed the entire 2D game featured is this event. I also created a few models scattered around the other games."
+                    image={nauticalquestBrand}
+                    imageColor="#5662c9"
+                >
+                    <Tag body="2024" image={calendarIcon} />
+                    <Tag body="11K+ Live Viewers" image={artIcon} />
+                </Card>
+            </div>
+        </div>
+
+        <!-- Clients -->
+        <!-- <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
+            <span class="text-4xl font-bold text-black">Clients</span>
+            <span class="text-xl font-normal text-center text-black">Something about clients</span>
+        </div> -->
+    </main>
 </Layout>
 
 <style>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 
-	@layer components {
-		.tag {
-			@apply p-2 px-8 gap-4 flex justify-center items-center rounded-full bg-light-100 text-xl font-normal text-nowrap text-black
-		}
-
-		.button {
-			@apply p-2 pr-8 pl-4 gap-8 flex justify-center items-center rounded-lg border-2 text-xl font-normal text-nowrap text-black cursor-pointer ease-out duration-300
-		}
-		.button:hover {
-			@apply -translate-y-2 rotate-3 shadow-xl
-		}
-	}
+    @layer components { }
 </style>
-
-<!-- <style> -->
-	<!-- /* background-image: linear-gradient(var(--themeMain100) 80%, var(--themeMain200)); */ -->
-<!-- </style> -->
