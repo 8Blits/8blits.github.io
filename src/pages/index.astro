@@ -5,6 +5,8 @@ import TagIntro from "../components/TagIntro.astro";
 import TagContainerIntro from "../components/TagContainerIntro.astro";
 import ButtonIntro from "../components/ButtonIntro.astro";
 import Card from "../components/Card.astro";
+import Client from "../components/Client.astro";
+import Footer from "../components/Footer.astro";
 import FaIcon from "../components/FaIcon.astro";
 import { Image } from "astro:assets";
 
@@ -23,6 +25,15 @@ import calendarIcon from "/public/images/icons/calendar.png";
 /* Brands */
 import stinkysmpBrand from "/public/images/brands/stinkysmp.png";
 import nauticalquestBrand from "/public/images/brands/nauticalquest.png";
+import hideaway from "/public/images/brands/hideaway.png";
+import gamemaster from "/public/images/brands/gamemaster.png";
+
+import dotwav from "/public/images/brands/dotwav.png";
+import evnt from "/public/images/brands/evnt.png";
+import frostagon from "/public/images/brands/frostagon.png";
+import strutworld from "/public/images/brands/strutworld.png";
+import syszee from "/public/images/brands/syszee.png";
+import tinyembers from "/public/images/brands/tinyembers.png";
 
 // ---
 
@@ -38,9 +49,9 @@ const age: number = calculateAge("3/30/2006");
     <main class="flex justify-center items-center flex-col gap-40">
         <!-- Intro -->
         <div class="container mx-auto p-12 pt-0 gap-6 flex justify-center items-center flex-col mt-40 rounded-lg shadow-2xl bg-light-50">
-            <div class="relative">
+            <div class="fade-in relative">
                 <Image
-                    class="rounded-full -mt-20 w-40 h-40"
+                    class="rounded-full -mt-20 w-40 h-40 outline outline-8 outline-light-50 shadow-xl"
                     src={avatarIcon}
                     alt=""
                     width="825"
@@ -48,8 +59,8 @@ const age: number = calculateAge("3/30/2006");
                 />
                 <div class="w-8 h-8 absolute bottom-0 right-0 rounded-full bg-allow-100 outline outline-8 outline-light-50"></div>
             </div>
-            <span class="text-4xl font-bold text-black">8Blits</span>
-            <span class="text-xl font-normal text-center text-black">Self-driven {age} year old creative mind, block game enthusiast!</span>
+            <span class="fade-in text-4xl font-bold text-black">8Blits</span>
+            <span class="fade-in text-xl font-normal text-center text-black">Self-driven {age} year old creative mind, block game enthusiast!</span>
             <TagContainerIntro>
                 <TagIntro body="2D Artist" image={artIcon} />
                 <TagIntro body="Vector Artist" image={vectorIcon} />
@@ -59,8 +70,8 @@ const age: number = calculateAge("3/30/2006");
                 <TagIntro body="Web Dev" image={webIcon} />
             </TagContainerIntro>
 
-            <span class="text-4xl font-normal text-center text-black mt-6">Get in touch!</span>
-            <div class="flex justify-center gap-3">
+            <span class="fade-in text-4xl font-normal text-center text-black mt-6">Get in touch!</span>
+            <div class="fade-in flex justify-center gap-3">
                 <ButtonIntro
                     href="https://discord.gg/GR4m8VnzTX"
                     body="Discord"
@@ -77,7 +88,6 @@ const age: number = calculateAge("3/30/2006");
         <!-- Projects -->
         <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
             <span class="text-4xl font-bold text-black">Projects</span>
-            <!-- <span class="text-xl font-normal text-center text-black">Something about projects</span> -->
 
             <div class="w-full grid grid-cols-1 gap-6">
                 <Card
@@ -95,19 +105,55 @@ const age: number = calculateAge("3/30/2006");
                     title="Princess Cruises Nautical Quest, EVNT Games"
                     subtitle="Brand activation for the cruise company Princess Cruises. I designed the entire 2D game featured is this event. I also created a few models scattered around the other games."
                     image={nauticalquestBrand}
-                    imageColor="#5662c9"
+                    imageColor="#111f69"
                 >
                     <Tag body="2024" image={calendarIcon} />
                     <Tag body="11K+ Live Viewers" image={artIcon} />
+                </Card>
+                <Card
+                    href="https://x.com/PlayHideaway"
+                    title="Hideaway"
+                    subtitle="Very polished unique role-play and adventure focused Minecraft server. I designed their roadmap announcing their upcoming features."
+                    image={hideaway}
+                    imageColor="#c8612d"
+                >
+                    <Tag body="2023" image={calendarIcon} />
+                    <Tag body="10K+ Users" image={artIcon} />
+                </Card>
+                <Card
+                    title="StrutWorld, TinyEmbers"
+                    subtitle="Custom Minecraft server with a very engaging take on Skyblock giving it a more RPG feel. This server also featured a PVP/minigame, and SMP gamemode. I was creative direction for their RPG game, designing gameplay mechanics and creating all the assets for the server."
+                    image={strutworld}
+                    imageColor="#005c00"
+                >
+                    <Tag body="2023" image={calendarIcon} />
+                    <Tag body="5K+ Users" image={artIcon} />
+                </Card>
+                <Card
+                    href="https://x.com/FNdotGames/status/1588997009767387136"
+                    title="BisectHosting Game Master, DotWAV"
+                    subtitle="Brand activation and charity fundraiser for Gamers Outreach. I designed the character for their 2D game."
+                    image={gamemaster}
+                    imageColor="#0269aa"
+                >
+                    <Tag body="2022" image={calendarIcon} />
+                    <Tag body="$1.2K Raised for Charity" image={artIcon} />
                 </Card>
             </div>
         </div>
 
         <!-- Clients -->
-        <!-- <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
+        <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
             <span class="text-4xl font-bold text-black">Clients</span>
-            <span class="text-xl font-normal text-center text-black">Something about clients</span>
-        </div> -->
+            <div class="w-full grid grid-cols-2 md:grid-cols-2 gap-6">
+                <Client image={evnt} imageColor="#ffffff"/>
+                <Client image={tinyembers} imageColor="#ffffff"/>
+                <Client image={dotwav} imageColor="#ffffff"/>
+                <Client image={syszee} imageColor="#ffffff"/>
+            </div>
+        </div>
+
+        <Footer />
     </main>
 </Layout>
 
@@ -116,5 +162,7 @@ const age: number = calculateAge("3/30/2006");
     @tailwind components;
     @tailwind utilities;
 
-    @layer components { }
+    @layer components {
+
+     }
 </style>

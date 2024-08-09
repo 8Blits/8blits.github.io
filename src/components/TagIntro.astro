@@ -9,7 +9,19 @@ interface Props {
 const { body, image } = Astro.props;
 ---
 
-<div class="w-40 p-1 px-4 gap-2 flex justify-center items-center rounded-full bg-light-100 text-base font-normal text-nowrap text-black">
+<div class="tag w-44 bg-light-100">
 	<Image class="w-6 h-6" src={image} alt="" width="360" height="360"/>
-	<span>{body}</span>
+	<span class="grow text-center">{body}</span>
 </div>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer components {
+		.tag {
+			@apply p-2 px-6 flex gap-4 items-center rounded-full text-base  font-normal text-nowrap text-black
+		}
+	}
+</style>
