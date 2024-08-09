@@ -10,10 +10,15 @@ const { title } = Astro.props;
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
+        <meta name="description" content="8Blits's Portfolio" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
+        <meta property="og:title" content="8Blits's Portfolio" />
+        <meta property="og:description" content="Self-driven creative mind, block game enthusiast!" />
+        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:url" content="https://8blits.com" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <title>{title}</title>
     </head>
     <body>
