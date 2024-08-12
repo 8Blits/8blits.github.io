@@ -21,7 +21,7 @@ const { href, body, image } = Astro.props;
 
 	@layer components {
 		.button {
-			@apply p-2 pr-8 pl-4 gap-8 flex justify-center items-center rounded-lg border-2 text-xl font-normal text-nowrap text-black cursor-pointer ease-out duration-300
+			@apply p-2 pr-8 pl-8 md:pl-4 gap-4 md:gap-8 flex justify-center items-center rounded-lg border-2 text-xl font-normal text-nowrap text-black cursor-pointer ease-out duration-300
 		}
 		.button:hover {
 			@apply -translate-y-2 rotate-3 shadow-xl
