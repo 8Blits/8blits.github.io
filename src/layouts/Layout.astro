@@ -36,7 +36,7 @@ const { title } = Astro.props;
                             observer.unobserve(e) // little optimization
                         }
                     });
-                }, { threshold: 0.7 })
+                }, { threshold: 0.5 })
         
                 elements.forEach(element => {
                     observer.observe(element)

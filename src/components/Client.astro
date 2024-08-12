@@ -9,6 +9,6 @@ interface Props {
 const { image, imageColor } = Astro.props;
 ---
 
-<div style={{ backgroundColor: imageColor }} class="fade-in p-8 md:p-14 rounded-lg border-2 border-light-100 bg-light-50 w-full max-h-60">
+<div style={{ backgroundColor: imageColor }} class="fade-in p-8 md:p-14 rounded-lg border-2 border-light-100 bg-light-50 w-full h-36 md:h-48">
     <Image class="object-contain w-full h-full" src={image} alt="Brand Logo" width="1280" height="1280"/>
 </div>

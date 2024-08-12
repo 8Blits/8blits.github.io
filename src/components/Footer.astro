@@ -10,7 +10,10 @@ function calculateYear() {
 const year = calculateYear()
 ---
 
-<div class="container mx-auto mb-0 p-12 gap-2 flex justify-center items-center flex-row rounded-lg shadow-2xl bg-light-50">
-    <FaIcon icon={faCopyright} />
-    <span class="text-xl font-normal text-center text-black">{year}, Frostagon LLC. All rights reserved.</span>
+<div class="container mx-auto mb-0 p-12 gap-2 flex justify-center items-center flex-col md:flex-row rounded-lg shadow-2xl bg-light-50">
+    <span class="inline-flex items-center gap-2 text-xl font-normal text-center text-black">
+        <FaIcon icon={faCopyright} />
+        <span>{year}, Frostagon LLC.</span>
+    </span>
+    <span class="text-xl font-normal text-center text-black">All rights reserved.</span>
 </div>
