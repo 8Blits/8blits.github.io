@@ -9,6 +9,7 @@ import Client from "../components/Client.astro";
 import Footer from "../components/Footer.astro";
 import FaIcon from "../components/FaIcon.astro";
 import { Image } from "astro:assets";
+import Art from "../components/Art.astro";
 
 /* Icons */
 import avatarIcon from "/public/images/8Blits@825px.png";
@@ -23,6 +24,9 @@ import emailIcon from "/public/images/icons/email.png";
 import calendarIcon from "/public/images/icons/calendar.png";
 
 /* Art */
+import icons from "/public/images/art/icons.png";
+import honeyBearAd from "/public/images/art/honeyBearAd.png";
+import worldGateAd from "/public/images/art/worldGateAd.png";
 import christmasFurniture from "/public/images/art/christmasFurniture.png";
 import christmasSnowglobe from "/public/images/art/christmasSnowglobe.png";
 import christmasStarterpack from "/public/images/art/christmasStarterpack.png";
@@ -47,10 +51,11 @@ import gamemaster from "/public/images/brands/gamemaster.png";
 
 import dotwav from "/public/images/brands/dotwav.png";
 import evnt from "/public/images/brands/evnt.png";
+import moonrock from "/public/images/brands/moonrock.png";
 import frostagon from "/public/images/brands/frostagon.png";
 import syszee from "/public/images/brands/syszee.png";
 import tinyembers from "/public/images/brands/tinyembers.png";
-import Art from "../components/Art.astro";
+import bumpyevents from "/public/images/brands/bumpyevents.webp";
 
 // ---
 
@@ -170,35 +175,40 @@ const age: number = calculateAge("3/30/2006");
 
         <!-- Art -->
         <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
-            <span class="text-4xl font-bold text-black">Art</span>
+            <span class="text-4xl font-bold text-black">Portfolio</span>
 
-            <div class="w-full grid grid-cols-2 gap-6 justify-items-center">
+            <div class="w-full grid grid-cols-2 gap-12 justify-items-center">
+                <Art image={honeyBearAd}, wide={true} />
                 <Art image={christmasFurniture} />
                 <Art image={christmasSnowglobe} />
+                <Art image={worldGateAd}, wide={true} />
                 <Art image={christmasStarterpack} />
                 <Art image={halloweenFurniture} />
                 <Art image={halloweenStarterpack} />
                 <Art image={halloweenToolpack} />
+                <Art image={icons}, wide={true} />
                 <Art image={keyChristmas} />
                 <Art image={keyHalloween} />
                 <Art image={keyHoney} />
                 <Art image={milksmpBrand} />
+                <Art image={frostaverseBrand}, wide={true} />
                 <Art image={honeysmpBrand} />
                 <Art image={honeysmpHalloweenBrand} />
-                <!-- <Art image={honeysmpChristmasBrand} /> -->
+                <Art image={honeysmpChristmasBrand} />
                 <Art image={stinkysmpBrand} />
-                <Art image={frostaverseBrand} />
             </div>
         </div>
 
         <!-- Clients -->
         <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
             <span class="text-4xl font-bold text-black">Clients</span>
-            <div class="w-full grid grid-cols-2 md:grid-cols-2 gap-6">
+            <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-6">
+                <Client image={moonrock} imageColor="#ffffff"/>
                 <Client image={evnt} imageColor="#ffffff"/>
                 <Client image={tinyembers} imageColor="#ffffff"/>
-                <Client image={dotwav} imageColor="#ffffff"/>
                 <Client image={syszee} imageColor="#ffffff"/>
+                <Client image={bumpyevents} imageColor="#ffffff"/>
+                <Client image={dotwav} imageColor="#ffffff"/>
             </div>
         </div>
 

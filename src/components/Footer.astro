@@ -1,8 +1,11 @@
 ---
 import FaIcon from "../components/FaIcon.astro";
 import { Image } from "astro:assets";
+import ButtonIntro from "../components/ButtonIntro.astro";
 
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import discordIcon from "/public/images/icons/discord.png";
+import emailIcon from "/public/images/icons/email.png";
 
 function calculateYear() {
     return new Date().getFullYear()
@@ -10,10 +13,26 @@ function calculateYear() {
 const year = calculateYear()
 ---
 
-<div class="container mx-auto mb-0 p-12 gap-2 flex justify-center items-center flex-col md:flex-row rounded-lg shadow-2xl bg-light-50">
-    <span class="inline-flex items-center gap-2 text-xl font-normal text-center text-black">
-        <FaIcon icon={faCopyright} />
-        <span>{year}, Frostagon LLC.</span>
-    </span>
-    <span class="text-xl font-normal text-center text-black">All rights reserved.</span>
+<div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
+    <span class="fade-in text-4xl font-bold text-black">Get in touch!</span>
+    <div class="fade-in flex justify-center gap-3">
+        <ButtonIntro
+            href="https://discord.gg/GR4m8VnzTX"
+            body="Discord"
+            image={discordIcon}
+        />
+        <ButtonIntro
+            href="mailto:8blits@hexbros.com"
+            body="Email"
+            image={emailIcon}
+        />
+    </div>
+    <div class="gap-12" />
+    <div>
+        <span class="inline-flex items-center gap-2 text-xl font-normal text-center text-black">
+            <FaIcon icon={faCopyright} />
+            <span>{year}, Frostagon LLC.</span>
+        </span>
+        <span class="text-xl font-normal text-center text-black">All rights reserved.</span>
+    </div>
 </div>
