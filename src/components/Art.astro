@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	image: ImageMetadata;
+}
+
+const { image } = Astro.props;
+---
+
+<div class="fade-in p-8 flex justify-center items-center w-full rounded-lg md:max-w-96 h-96 md:h-full">
+    <div class="aspect-square w-full h-full">
+        <Image class="object-contain w-full h-full" src={image} alt="Brand Logo" width="1280" height="1280"/>
+    </div>
+</div>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+</style>

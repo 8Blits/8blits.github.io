@@ -22,8 +22,24 @@ import discordIcon from "/public/images/icons/discord.png";
 import emailIcon from "/public/images/icons/email.png";
 import calendarIcon from "/public/images/icons/calendar.png";
 
+/* Art */
+import christmasFurniture from "/public/images/art/christmasFurniture.png";
+import christmasSnowglobe from "/public/images/art/christmasSnowglobe.png";
+import christmasStarterpack from "/public/images/art/christmasStarterpack.png";
+import halloweenFurniture from "/public/images/art/halloweenFurniture.png";
+import halloweenStarterpack from "/public/images/art/halloweenStarterpack.png";
+import halloweenToolpack from "/public/images/art/halloweenToolpack.png";
+import keyChristmas from "/public/images/art/keyChristmas.png";
+import keyHalloween from "/public/images/art/keyHalloween.png";
+import keyHoney from "/public/images/art/keyHoney.png";
+import honeysmpHalloweenBrand from "/public/images/brands/honeysmpHalloween.png";
+import honeysmpChristmasBrand from "/public/images/brands/honeysmpChristmas.png";
+import frostaverseBrand from "/public/images/brands/frostaverse.png";
+import stinkysmpBrand from "/public/images/brands/stinkysmp.png";
+
 /* Brands */
 import honeysmpBrand from "/public/images/brands/honeysmp.png";
+import milksmpBrand from "/public/images/brands/milksmp.png";
 import nauticalquestBrand from "/public/images/brands/nauticalquest.png";
 import hideaway from "/public/images/brands/hideaway.png";
 import strutworld from "/public/images/brands/strutworld.png";
@@ -34,6 +50,7 @@ import evnt from "/public/images/brands/evnt.png";
 import frostagon from "/public/images/brands/frostagon.png";
 import syszee from "/public/images/brands/syszee.png";
 import tinyembers from "/public/images/brands/tinyembers.png";
+import Art from "../components/Art.astro";
 
 // ---
 
@@ -101,8 +118,17 @@ const age: number = calculateAge("3/30/2006");
                     <Tag body="500+ Users" image={artIcon} />
                 </Card>
                 <Card
+                    href="https://x.com/JustKaboodle/status/1871329994078933421"
+                    title="GonanNeedMilk MilkSMP, Moonrock Games"
+                    subtitle="Brand activation for GonnaNeedMilk. I designed all the in-game assets for this content creator SMP; including 3D models, GUIs, item textures, armor sets, the logo, and HUD elements"
+                    image={milksmpBrand}
+                    imageColor="#616f88"
+                >
+                    <Tag body="2024" image={calendarIcon} />
+                </Card>
+                <Card
                     href="https://x.com/EVNTgames/status/1821245704582410317"
-                    title="Princess Cruises Nautical Quest, EVNT Games"
+                    title="Princess Cruises Nautical Quest, Moonrock Games"
                     subtitle="Brand activation for the cruise company Princess Cruises. I designed the entire 2D game featured is this event. I also created a few models scattered around the other games."
                     image={nauticalquestBrand}
                     imageColor="#111f69"
@@ -120,7 +146,7 @@ const age: number = calculateAge("3/30/2006");
                     <Tag body="2023" image={calendarIcon} />
                     <Tag body="10K+ Users" image={artIcon} />
                 </Card>
-                <Card
+                <!-- <Card
                     title="StrutWorld, TinyEmbers"
                     subtitle="Custom Minecraft server with a very engaging take on Skyblock giving it a more RPG feel. This server also featured a PVP/minigame, and SMP gamemode. I was creative direction for their RPG game, designing gameplay mechanics and creating all the assets for the server."
                     image={strutworld}
@@ -128,7 +154,7 @@ const age: number = calculateAge("3/30/2006");
                 >
                     <Tag body="2023" image={calendarIcon} />
                     <Tag body="5K+ Users" image={artIcon} />
-                </Card>
+                </Card> -->
                 <Card
                     href="https://x.com/FNdotGames/status/1588997009767387136"
                     title="BisectHosting Game Master, DotWAV"
@@ -139,6 +165,29 @@ const age: number = calculateAge("3/30/2006");
                     <Tag body="2022" image={calendarIcon} />
                     <Tag body="$1.2K Raised for Charity" image={artIcon} />
                 </Card>
+            </div>
+        </div>
+
+        <!-- Art -->
+        <div class="container mx-auto p-12 gap-6 flex justify-center items-center flex-col rounded-lg shadow-2xl bg-light-50">
+            <span class="text-4xl font-bold text-black">Art</span>
+
+            <div class="w-full grid grid-cols-2 gap-6 justify-items-center">
+                <Art image={christmasFurniture} />
+                <Art image={christmasSnowglobe} />
+                <Art image={christmasStarterpack} />
+                <Art image={halloweenFurniture} />
+                <Art image={halloweenStarterpack} />
+                <Art image={halloweenToolpack} />
+                <Art image={keyChristmas} />
+                <Art image={keyHalloween} />
+                <Art image={keyHoney} />
+                <Art image={milksmpBrand} />
+                <Art image={honeysmpBrand} />
+                <Art image={honeysmpHalloweenBrand} />
+                <!-- <Art image={honeysmpChristmasBrand} /> -->
+                <Art image={stinkysmpBrand} />
+                <Art image={frostaverseBrand} />
             </div>
         </div>
 
