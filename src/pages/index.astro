@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro'
 import Layout from "../layouts/Layout.astro";
 import Tag from "../components/Tag.astro";
 import TagIntro from "../components/TagIntro.astro";
@@ -82,6 +83,7 @@ const age: number = calculateAge("3/30/2006");
 ---
 
 <Layout title="8Blits">
+    <Analytics/>
     <main class="flex justify-center items-center flex-col gap-40">
         <!-- Intro -->
         <div class="container mx-auto p-12 pt-0 gap-6 flex justify-center items-center flex-col mt-40 rounded-lg shadow-2xl bg-light-50">
